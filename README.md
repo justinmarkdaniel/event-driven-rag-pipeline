@@ -4,7 +4,7 @@ Production-grade async document ingestion pipeline for RAG systems. Handles dedu
 
 ## Why This Matters
 
-Most RAG projects skip the hard part: reliable ingestion at scale. This pipeline demonstrates production maturity:
+Most RAG projects skip the hard part: reliable ingestion at scale. This pipeline includes the following features:
 - **Semantic Deduplication**: Hash-based registry prevents duplicate embeddings
 - **Rate Limiting**: Token bucket ensures you don't exhaust embedding API quotas
 - **Resilience**: SQS + DLQ routes failures to dead-letter queue after 3 retries
@@ -60,7 +60,7 @@ The Terraform config includes:
 - Lambda timeout and memory sizing
 - Least-privilege IAM policies
 
-## What This Demonstrates
+## Additional Features
 
 - **Async Architecture Thinking**: Event-driven, decoupled ingestion and processing
 - **Resilience Patterns**: DLQ routing, exponential backoff (implicit in retries), rate limiting
